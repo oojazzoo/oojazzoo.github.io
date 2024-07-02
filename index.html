@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Slabo+27px&display=swap" rel="stylesheet">
+		
+		<style>
+			body {
+				margin: 0;
+				position: relative;
+				min-width: 600px;
+				
+				//background-image: url("images/debut_light.png");
+				background-image: url("images/exclusive_paper.png");
+			}
+			.contentWrap {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.column {
+				box-sizing: border-box;
+				
+				display: flex;
+				align-items: center;
+			}
+			.mainHeader {
+				width: 33.33%;
+				height: 225px;
+				float: left;
+			}
+			.navBar {
+				padding-left: 50px;
+			}
+			.navBar a {
+				margin: 0 20px 0 20px;
+				text-decoration: none;
+				font-size: 18px;
+				
+				font-family: "Arsenal SC", sans-serif;
+				font-weight: 300;
+				font-style: normal;
+				
+				letter-spacing: 2px;
+				color: black;
+			}
+			.mainLogo {
+				text-align: right;
+				font-size: 50px;
+				font-family: Helvetica,Arial,sans-serif;
+				justify-content: center;
+			}
+			.bookButton {
+				padding: 15px 30px 15px 30px;
+				background-color: #D6D6D6;
+				border-radius: 30px;
+				font-family: "Slabo 27px", serif;
+				font-size: 15px;
+				letter-spacing: 1px;
+			}
+			.column:has(.bookButton) {
+				padding-right: 50px;
+				justify-content: right;
+			}
+			.hamburger {
+				width: 32px;
+				height: 32px;
+				position: absolute;
+				top: 71px;
+				right: 50px;
+				display: none;
+				background-image: url("images/hamburgerIcon.svg");
+			}
+			.hamburger input {
+				width: 32px;
+				height: 32px;
+				display: block;
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				-webkit-touch-callout: none;
+			}
+			.hamburger:has(input:checked) {
+				background-image: url("images/hamburgeropenIcon.svg");
+			}
+			.hamMenu {
+				display: none;
+				position: absolute;
+				width: 100%;
+				background-color: #FFFFFF;
+				top: 175px;
+				left: 0;
+				text-align: center;
+			}
+			.hamMenu a {
+				width: 100%;
+				display: block;
+				font-size: 25px;
+				font-family: "Arsenal SC", sans-serif;
+				font-weight: 300;
+				font-style: normal;
+				letter-spacing: 2px;
+				color: black;
+				text-decoration: none;
+				margin: 15px 0 25px 0;
+			}
+			.instaIcon {
+				width: 32px;
+				height: 32px;
+			}
+			.instaIcon2 {
+				width: 24px;
+				height: 24px;
+				position: relative;
+				top: 4px;
+			}
+			.row:has(input:checked) ~ .hamMenu {
+				display: block;
+			}
+			
+			.mainContentLeft {
+				width: 40%;
+				//padding-left: 25px;
+				float: left;
+			}
+			.mainContentLeft img {
+				width: 100%;
+			}
+			.mainContentRight {
+				width: 60%;
+				float: left;
+				padding: 25px;
+				
+				font-family: "Slabo 27px", serif;
+				font-size: 24px;
+			}
+			
+			.bottomBar {
+				box-sizing: border-box;
+				
+				width: 100%;
+				height: 50px;
+				min-height: 50px;
+				padding: 15px 50px 0 0;
+				
+				flex-grow: 1;
+				background: #262626;
+				color: white;
+				
+				text-align: right;
+				
+				font-family: "Arsenal SC", sans-serif;
+				font-weight: 300;
+				font-style: normal;
+				letter-spacing: 1px;
+				font-size: 12px;
+				
+				margin-top: 15px;
+			}
+			
+			@media screen and (max-width: 1024px) {
+				.mainHeader { height: 175px; }
+				.navBar { display: none; }
+				.column:has(.bookButton) { display: none; }
+				.mainLogo { width: 100%; }
+				.hamburger { display: block; }
+			}
+		</style>
+		
+		<title>Paintrag Tattoo</title>
+	</head>
+	
+	<body>
+		<div class="contentWrap">
+			<div class="row">
+				<div class="mainHeader column navBar">
+					<a href="#">Policies</a>
+					<a href="#">FAQ</a>
+					<a href="#">After Care</a>
+					<a href="#"><img class="instaIcon2" src="images/Instagram_Glyph_Black.svg"/></a>
+				</div>
+				
+				<div class="mainHeader column mainLogo">
+					PaintRag
+				</div>
+				
+				<div class="mainHeader column">
+					<div class="bookButton">BOOK A TATTOO</div>
+				</div>
+				
+				<div class="hamburger">
+					<input type="checkbox"/>
+				</div>
+			</div>
+			<div class="hamMenu">
+				<a href="#">Policies</a>
+				<a href="#">FAQ</a>
+				<a href="#">After Care</a>
+				<a href="#">Book</a>
+				<a href="#"><img class="instaIcon" src="images/Instagram_Glyph_Black.svg"/></a>
+			</div>
+			
+			<div class="row">
+				<div class="column mainContentLeft">
+					<img src="images/portrait.jpg"/>
+				</div>
+				
+				<div class="column mainContentRight">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit ullamcorper erat eget sagittis. Quisque lectus tortor, ullamcorper eget nunc condimentum, ultrices ultrices quam. Fusce tempor libero a ex convallis pharetra. Morbi et tincidunt mi, a interdum orci. Phasellus luctus sit amet risus at euismod. Ut convallis, nunc sed vestibulum condimentum, orci massa congue ligula, ut finibus quam tortor ac justo. Aliquam eget egestas tortor. Quisque bibendum lacus eget ante porta egestas. Duis sagittis tincidunt quam sed rhoncus. Praesent id luctus ligula, at sodales libero. 
+				</div>
+			</div>
+			
+			<div class="row bottomBar">
+				© 2024 PaintRag | All rights reserved
+			</div>
+		</div>
+	</body>
+</html>
