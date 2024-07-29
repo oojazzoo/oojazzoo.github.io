@@ -165,12 +165,14 @@
 				margin: 25px 10px 0 10px;
 				width: 100%;
 				box-sizing: border-box;
+				border-top: 1px black;
 			}
 			.faqEntry {
 				width: 100%;
 				padding: 10px;
 				height: 50px;
 				overflow: hidden;
+				border-bottom: 1px black;
 			}
 			.faqPlus {
 				text-align: center;
@@ -187,10 +189,13 @@
 				cursor: pointer;
 				-webkit-touch-callout: none;
 			}
+			.faqEntry:has(.faqInput:checked) {
+				overflow: visible;
+			}
 			.faqTitle {
 				float: left;
 				text-align: right;
-				font-size: 25px;
+				font-size: 15px;
 			}
 			// End FAQ
 			
