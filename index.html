@@ -118,11 +118,13 @@
 				color: black;
 				text-decoration: none;
 				margin: 15px 0 25px 0;
-				top: 10px;
-				transition: top 1s;
+			}
+			@keyframes menuASlide {
+				from {top: 10px;}
+				to {top: 0px;}
 			}
 			.row:has(input:checked) ~ .hamMenu a {
-				top: 0px;
+				animation: menuASlide 1s;
 			}
 			.instaIcon {
 				width: 32px;
