@@ -160,7 +160,7 @@
 				font-size: 24px;
 			}
 			
-			// FAQ Page CSS
+			
 			.faqWrapper {
 				margin: 25px 10px 0 10px;
 				width: 100%;
@@ -171,37 +171,56 @@
 				width: 100%;
 				padding: 10px;
 				height: 50px;
+				box-sizing: border-box;
 				overflow: hidden;
 				border-bottom: 1px black;
+				background-color: #EEEEEE;
+				
+				font-family: "Slabo 27px", serif;
+				font-size: 20px;
 			}
 			.faqPlus {
 				width: 20px;
 				height: 20px;
 				text-align: center;
-				font-size: 25px;
-				float: left;
-				margin: 10px 5px 0 5px;
+				position: absolute;
+				font-size: 35px;
+				line-height: 25px;
+				cursor: pointer;
+				-webkit-touch-callout: none;
 			}
 			.faqInput {
 				width: 20px;
 				height: 20px;
 				display: block;
 				position: absolute;
+				top: 2px;
+				left: -3px;
 				opacity: 0;
 				cursor: pointer;
 				-webkit-touch-callout: none;
 			}
 			.faqEntry:has(.faqInput:checked) {
 				overflow: visible;
+				height: auto;
+			}
+			.faqEntry:has(.faqInput:checked) .faqPlusText {
+				//rotate: 45deg;
 			}
 			.faqTitle {
-				float: left;
-				text-align: right;
-				font-size: 15px;
-				margin-left: 25px;
-				width: 100%;
+				height: 50px;
+				text-align: left;
+				margin-left: 40px;
+				font-size: 25px;
+				display: block;
+				line-height: 30px;
+				letter-spacing: 1px;
 			}
-			// End FAQ
+			.faqContent {
+				text-align: left;
+				display: block;
+			}
+			
 			
 			.bottomBar {
 				box-sizing: border-box;
@@ -273,7 +292,7 @@
 					<div class="faqWrapper">
 						<div class="faqEntry">
 							<div class="faqPlus">
-								+
+								<div class="faqPlusText">+</div>
 								<input class="faqInput" type="checkbox"/>
 							</div>
 							<div class="faqTitle">
@@ -283,6 +302,8 @@
 								Blah blah blah blah blah blah blah blah
 							</div>
 						</div>
+						
+
 					</div>
 				</div>
 			</div>
