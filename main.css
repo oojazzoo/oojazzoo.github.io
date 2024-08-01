@@ -147,14 +147,12 @@ body {
 	font-size: 24px;
 }
 
-.custList {
-	list-style-image: url(./images/splat-icon.svg);
-}
 .cusList li {
+	list-style-image: url(./images/splat-icon.svg);
 	padding-left: 15px;
 }
 .cusList li::marker {
-	content: url(./images/splat-icon.svg);
+	//content: url(./images/splat-icon.svg);
 }
 
 
