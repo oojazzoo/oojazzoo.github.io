@@ -138,19 +138,20 @@ body {
 	animation: menuHamFade .5s;
 }
 
-.mainContentLeft {
-	width: 40%;
-	//padding-left: 25px;
-	float: left;
-}
-.mainContentLeft img {
-	width: 100%;
-}
 .mainContentRight {
 	padding: 25px;
+	max-width: 800px;
+	margin: auto;
 	
 	font-family: "Slabo 27px", serif;
 	font-size: 24px;
+}
+
+.cusList li {
+	padding-left: 15px;
+}
+.cusList li::marker {
+	content: url(./images/splat-icon.svg);
 }
 
 
