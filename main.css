@@ -91,10 +91,10 @@ body {
 	display: none;
 	position: absolute;
 	width: 100%;
-	height: 100%;
 	background-color: #FFFFFF;
 	top: 175px;
 	left: 0;
+	bottom: 0px;
 	text-align: center;
 	z-index: 100;
 	overflow: scroll;
@@ -247,4 +247,7 @@ body {
 	.column:has(.bookButton) { display: none; }
 	.mainLogo { width: 100%; justify-content: left; }
 	.hamburger { display: block; }
+}
+@media screen and (min-width: 1024px) {
+	.hamMenu { display: none !important; }
 }
