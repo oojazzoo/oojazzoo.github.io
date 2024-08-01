@@ -4,13 +4,14 @@ body {
 	background-color: #EEF9EE;
 	overflow: visible;
 }
-body:has(.hamCheckBox:checked) {
-	overflow: hidden;
-}
 .contentWrap {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	overflow: visible;
+}
+.contentWrap:has(.hamCheckBox:checked) {
+	overflow: hidden;
 }
 .row:after {
 	content: "";
@@ -132,7 +133,6 @@ body:has(.hamCheckBox:checked) {
 	top: 4px;
 }
 .row:has(input:checked) ~ .hamMenu {
-	height: 100%;
 	display: block;
 	animation: menuHamFade .5s;
 }
