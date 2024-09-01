@@ -246,6 +246,7 @@ body {
 	.navBar { display: none; }
 	.column:has(.bookButton) { display: none; }
 	.mainLogo { width: 100%; justify-content: left; }
+	.mainLogo img { max-height: 85px; }
 	.hamburger { display: block; }
 }
 @media screen and (min-width: 1024px) {
